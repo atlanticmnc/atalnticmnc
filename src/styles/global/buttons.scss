@@ -1,0 +1,132 @@
+button.btn {
+  padding: 20px 25px;
+
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: $white;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  transition: 0.2s ease;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+
+  &.btn-primary {
+    color: $white;
+
+    background: $blue;
+    border-color: $blue;
+
+    &:hover {
+      color: $white;
+
+      background: $blueHover;
+      border-color: $blueHover;
+    }
+
+    &:disabled {
+      background: $blue-25;
+      border-color: transparent;
+      color: $blue;
+    }
+  }
+
+  &.btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 20px 20px 30px;
+    gap: 10px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+
+      width: 18px;
+      height: 18px;
+
+      background: $white;
+
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8225 4.94751L15.375 9.50001L10.8225 14.0525M2.625 9.50001H15.2475' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      -webkit-mask-size: contain;
+
+      transition: 0.2s ease;
+    }
+
+    &:disabled {
+      &::after {
+        background: $blue;
+      }
+    }
+  }
+
+  &.btn-benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 20px 20px 30px;
+    gap: 20px;
+
+    span {
+      padding: 3px 10px;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $white;
+
+      border-radius: 5px;
+      background: $black;
+
+      transition: 0.2s ease;
+    }
+  }
+
+  &.btn-primary-outlined {
+    color: $blue;
+
+    background: transparent;
+    border-color: $blue;
+
+    &.btn-arrow {
+      &::after {
+        background: $blue;
+      }
+    }
+
+    &.btn-benefit {
+      span {
+        background: $blue;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      border-color: $blueHover;
+
+      &.btn-arrow {
+        &::after {
+          background: $white;
+        }
+      }
+
+      &.btn-benefit {
+        span {
+          background: $white;
+          color: $blue;
+        }
+      }
+    }
+  }
+}

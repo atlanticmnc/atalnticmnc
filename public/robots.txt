@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://api.thebranderly.com/sitemap/index.xml
+Sitemap: https://thebranderly.com/sitemap.xml

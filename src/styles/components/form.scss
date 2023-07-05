@@ -1,0 +1,68 @@
+label.form-label {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 600;
+  color: $white;
+
+  margin-bottom: 15px;
+}
+
+input.form-control,
+textarea.form-control,
+select.form-select {
+  padding: 15px 25px;
+
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 600;
+  color: $white;
+
+  background: $blue-5;
+  border: 1px solid $blue-15;
+  border-radius: 10px;
+
+  box-shadow: none;
+  outline: none;
+
+  transition: 0.1s ease;
+
+  &::placeholder {
+    color: $white;
+    transition: 0.1s ease;
+  }
+
+  &:focus {
+    color: $white;
+
+    background: $blue-10;
+    border: 1px solid $blue-25;
+
+    box-shadow: none;
+
+    &::placeholder {
+      color: rgba($white, 0.35);
+    }
+  }
+
+  &:hover {
+    background: $blue-10;
+  }
+}
+
+textarea.form-control {
+  resize: none;
+  height: 120px;
+}
+
+select.form-select {
+  option {
+    color: $black;
+  }
+}
+
+form {
+  .row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+  }
+}

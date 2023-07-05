@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 500;
+
+  color: $black;
+  white-space: pre-line;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+
+  background: $white;
+}
+
+.container-fluid {
+  padding-right: calc(var(--bs-gutter-x) * 2);
+  padding-left: calc(var(--bs-gutter-x) * 2);
+}
+
+hr {
+  border-color: $lightGray;
+  opacity: 1;
+  margin: 0;
+}
+
+@import './typography';
+@import './buttons';
+@import './navigations';
+@import './sections';

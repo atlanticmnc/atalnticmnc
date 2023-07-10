@@ -6,11 +6,9 @@
 @import './const';
 @import './global/global';
 
-// header
+// components
 @import './components/header';
-
-// footer
 @import './components/footer';
-
-// form
 @import './components/form';
+@import './components/modal';
+@import './components/blocks/blocks';

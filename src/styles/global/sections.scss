@@ -9,11 +9,7 @@ section.section {
     padding-bottom: 0;
   }
 
-  h1 {
-    max-width: 1140px;
-  }
-
-  p {
-    max-width: 840px;
+  &.light-background {
+    background: #F8F8F8;
   }
 }

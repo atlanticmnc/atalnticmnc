@@ -1,18 +1,35 @@
-$blue: #326BFF;
-$blue-25: rgba($blue, 0.25);
-$blue-15: rgba($blue, 0.15);
-$blue-10: rgba($blue, 0.10);
-$blue-5: rgba($blue, 0.05);
+$primary: #386EBE;
+$primaryHover: #367BE1;
 
 $black: #101010;
-$lightBlack: #1F1F1F;
 $darkGray: #333333;
 $gray: #666666;
-$lightGray: #F0F0F0;
+$lightGray: #EBEBEB;
 $white: #FFFFFF;
 
 $yellow: #FFCC20;
 $red: #F23030;
 
-// hovers
-$blueHover: #2461FF;
+// fontSizes
+$font-size-General: 20px;
+
+$font-size-H1: 72px;
+$font-size-H2: 48px;
+$font-size-H3: 42px;
+$font-size-H4: 36px;
+$font-size-H5: 30px;
+$font-size-Subtitle: 20px;
+
+$font-size-P: 20px;
+$font-size-P-HeroBanner: 24px;
+$font-size-P-PersonalMessage: 28px;
+
+
+// lineHeights
+$line-height-General: 2;
+$line-height-Half: 1.5;
+
+$line-height-Heading: 1.35;
+
+$line-height-P: 2;
+$line-height-P-PersonalMessage: 2.25;

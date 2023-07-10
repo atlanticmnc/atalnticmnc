@@ -1,12 +1,49 @@
+form {
+  .row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+
+    &.gy-70 {
+      --bs-gutter-y: 70px;
+    }
+
+    &.button-gy-70 {
+      button {
+        margin: 70px 0 0;
+      }
+    }
+  }
+
+  &.form-container {
+    max-width: 740px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+// form-label
 label.form-label {
   font-size: 20px;
   line-height: 2;
   font-weight: 600;
-  color: $white;
+  color: $black;
 
   margin-bottom: 15px;
+
+  &.required {
+    &::after {
+      content: '*';
+      color: $red;
+
+      margin-left: 5px;
+    }
+  }
 }
 
+
+// form-control, form-select
 input.form-control,
 textarea.form-control,
 select.form-select {
@@ -15,10 +52,10 @@ select.form-select {
   font-size: 20px;
   line-height: 2;
   font-weight: 600;
-  color: $white;
+  color: $black;
 
-  background: $blue-5;
-  border: 1px solid $blue-15;
+  background: rgba($primary, 0.05);
+  border: 1px solid rgba($primary, 0.15);
   border-radius: 10px;
 
   box-shadow: none;
@@ -27,25 +64,34 @@ select.form-select {
   transition: 0.1s ease;
 
   &::placeholder {
-    color: $white;
+    color: $gray;
     transition: 0.1s ease;
   }
 
   &:focus {
-    color: $white;
+    color: $black;
 
-    background: $blue-10;
-    border: 1px solid $blue-25;
+    background: rgba($primary, 0.1);
+    border: 1px solid rgba($primary, 0.25);
 
     box-shadow: none;
 
     &::placeholder {
-      color: rgba($white, 0.35);
+      color: rgba($gray, 0.35);
     }
   }
 
   &:hover {
-    background: $blue-10;
+    background: rgba($primary, 0.1);
+  }
+
+  &.field-error {
+    background: rgba($red, 0.05);
+    border: 1px solid rgba($red, 0.15);
+
+    &:hover {
+      background: rgba($red, 0.1);
+    }
   }
 }
 
@@ -60,9 +106,261 @@ select.form-select {
   }
 }
 
-form {
-  .row {
-    --bs-gutter-x: 20px;
-    --bs-gutter-y: 20px;
+
+// form-check
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 0;
+
+  min-height: auto;
+  margin-bottom: 0;
+
+  label.form-check-label {
+    cursor: pointer;
+
+    font-size: $font-size-General;
+    line-height: $line-height-Half;
+    font-weight: 600;
+    color: $black;
+  }
+
+  input.form-check-input {
+    cursor: pointer;
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba($primary, 0.15);
+    border-radius: 5px;
+    background: rgba($primary, 0.1);
+
+    margin: 0;
+
+    &:checked[type=checkbox],
+    &:checked[type=radio] {
+      background: $blue;
+
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+      background-size: 24px 24px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background: rgba($primary, 0.15);
+    }
+
+    &.field-error {
+      background: rgba($red, 0.1);
+      border: 1px solid rgba($red, 0.15);
+
+      &:hover {
+        background: rgba($red, 0.15);
+      }
+    }
+  }
+
+  &.form-check-block {
+    position: relative;
+
+    width: 220px;
+    height: 220px;
+
+    input.form-check-input {
+      position: absolute;
+      z-index: 1;
+
+      top: 15px;
+      right: 15px;
+
+      width: 24px;
+      height: 24px;
+
+      &:checked[type=checkbox] {
+        background-size: 18px 18px;
+      }
+    }
+
+    label.form-check-label {
+      cursor: pointer;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      width: 100%;
+      height: 100%;
+
+      padding: 30px;
+
+      border: 1px solid rgba($primary, 0.15);
+      border-radius: 10px;
+
+      text-align: center;
+
+      .form-check-label-icon {
+        svg {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
+    &.form-check-block-error {
+      input.form-check-input {
+        background: rgba($red, 0.1);
+        border: 1px solid rgba($red, 0.15);
+
+        &:hover {
+          background: rgba($red, 0.15);
+        }
+      }
+
+      label.form-check-label {
+        border: 1px solid rgba($red, 0.15);
+      }
+    }
+  }
+}
+
+
+// form-range
+.form-range-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .form-range-values {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    .form-range-value {
+      font-weight: 600;
+
+      &.current {
+        position: absolute;
+        z-index: 1;
+
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 80px;
+        height: 40px;
+
+        font-size: 20px;
+        color: $blue;
+
+        border-radius: 5px;
+        background: #F5F8FF; // primary-5, not transparent
+        border: rgba($primary, 0.15);
+
+        transition: 0.1s ease;
+      }
+    }
+  }
+
+  &.field-error {
+    .form-range-value {
+      &.current {
+        color: $red;
+        background: #FEEAEA;
+        border-color: #FDE0E0;
+      }
+    }
+  }
+}
+
+
+// from-steps
+.form-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 50px;
+
+  .step {
+    display: flex;
+    align-items: center;
+
+    .step-icon {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 600;
+      color: transparent;
+
+      background: rgba($primary, 0.15);
+      border-radius: 99px;
+      border: 1px solid rgba($primary, 0.15);
+
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+
+      width: 80px;
+      height: 4px;
+
+      background: linear-gradient(to left, rgba($primary, 0.15) 50%, $primary 50%) right;
+      background-size: 200% 100%;
+
+      transition: 0.3s ease;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &.current {
+      .step-icon {
+        background: transparent;
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+
+    &.complete {
+      .step-icon {
+        background: $primary;
+        border-color: $primary;
+      }
+
+      &::after {
+        background-position: left;
+      }
+    }
   }
 }

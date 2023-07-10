@@ -12,11 +12,11 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  line-height: 2;
+  font-size: $font-size-General;
+  line-height: $line-height-General;
   font-weight: 500;
 
-  color: $black;
+  color: $darkGray;
   white-space: pre-line;
 
   -webkit-font-smoothing: antialiased;

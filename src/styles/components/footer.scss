@@ -7,5 +7,57 @@ footer {
   width: 100%;
   padding: 70px 0 30px;
 
-  border-top: 1px solid $lightBlack;
+  border-top: 1px solid $lightGray;
+
+  ul.nav {
+    padding: 0;
+    list-style: none;
+
+    li.nav-item {
+      &:first-child {
+        a.nav-link {
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        a.nav-link {
+          padding-right: 0;
+        }
+      }
+
+      a.nav-link {
+        font-size: 18px;
+        line-height: 2;
+        font-weight: 500;
+        color: $darkGray;
+
+        padding: 10px 25px;
+
+        transition: 0.1s ease;
+
+        &.active {
+          font-weight: 600;
+          color: $blue;
+
+          &:hover {
+            color: $primaryHover;
+          }
+        }
+
+        &:hover {
+          color: $primaryHover;
+        }
+      }
+    }
+  }
+
+  .copyright-text {
+    font-size: 18px;
+    color: $darkGray;
+  }
+
+  &.footer-landing-page {
+    padding: 30px 0 20px;
+  }
 }

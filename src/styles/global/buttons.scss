@@ -1,9 +1,10 @@
 button.btn {
   padding: 20px 25px;
 
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   line-height: 1.35;
-  font-weight: 700;
+  font-weight: 600;
   color: $white;
 
   border: 1px solid transparent;
@@ -20,23 +21,27 @@ button.btn {
     opacity: 1;
   }
 
+  &:hover {
+    color: $white;
+  }
+
   &.btn-primary {
     color: $white;
 
-    background: $blue;
-    border-color: $blue;
+    background: $primary;
+    border-color: $primary;
 
     &:hover {
       color: $white;
 
-      background: $blueHover;
-      border-color: $blueHover;
+      background: $primaryHover;
+      border-color: $primaryHover;
     }
 
     &:disabled {
-      background: $blue-25;
+      background: rgba($primary, 0.25);
       border-color: transparent;
-      color: $blue;
+      color: $primary;
     }
   }
 
@@ -65,7 +70,7 @@ button.btn {
 
     &:disabled {
       &::after {
-        background: $blue;
+        background: $primary;
       }
     }
   }
@@ -94,39 +99,68 @@ button.btn {
   }
 
   &.btn-primary-outlined {
-    color: $blue;
+    color: $primary;
 
     background: transparent;
-    border-color: $blue;
+    border-color: $primary;
 
     &.btn-arrow {
       &::after {
-        background: $blue;
+        background: $primary;
       }
     }
 
     &.btn-benefit {
       span {
-        background: $blue;
+        background: $primary;
       }
     }
 
     &:hover {
-      color: $white;
-      border-color: $blueHover;
+      color: $primaryHover;
+      border-color: $primaryHover;
 
       &.btn-arrow {
         &::after {
-          background: $white;
+          background: $primaryHover;
         }
       }
 
       &.btn-benefit {
         span {
-          background: $white;
-          color: $blue;
+          background: $primaryHover;
         }
       }
+    }
+  }
+
+  &.btn-landing-page {
+    padding: 30px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    background: $blue;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba($primary, 0.35);
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    &:hover {
+      transform: scale(1.015);
+      background: $primaryHover;
     }
   }
 }

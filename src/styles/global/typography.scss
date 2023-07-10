@@ -1,34 +1,17 @@
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
+  color: $black;
+
+  span {
+    &.primary-color {
+      color: $primary;
+    }
+  }
 }
 
 h1 {
-  font-size: 72px;
-  line-height: 1.35;
-  font-weight: 900;
-
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-h2 {
-  font-size: 56px;
-  line-height: 1.35;
-  font-weight: 900;
-
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-h3 {
-  font-size: 42px;
-  line-height: 1.35;
+  font-size: $font-size-H1;
+  line-height: $line-height-Heading;
   font-weight: 800;
 
   margin-bottom: 40px;
@@ -38,9 +21,33 @@ h3 {
   }
 }
 
+h2 {
+  font-size: $font-size-H2;
+  line-height: $line-height-Heading;
+  font-weight: 800;
+
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h3 {
+  font-size: $font-size-H3;
+  line-height: $line-height-Heading;
+  font-weight: 700;
+
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 h4 {
-  font-size: 32px;
-  line-height: 1.35;
+  font-size: $font-size-H4;
+  line-height: $line-height-Heading;
   font-weight: 700;
 
   margin-bottom: 30px;
@@ -51,9 +58,9 @@ h4 {
 }
 
 h5 {
-  font-size: 24px;
-  line-height: 1.35;
-  font-weight: 700;
+  font-size: $font-size-H5;
+  line-height: $line-height-Heading;
+  font-weight: 600;
 
   margin-bottom: 30px;
 
@@ -63,18 +70,58 @@ h5 {
 }
 
 p {
-  font-size: 20px;
-  line-height: 2;
+  font-size: $font-size-P;
+  line-height: $line-height-P;
   font-weight: 500;
+  color: $darkGray;
 
   margin-bottom: 30px;
+
+  span {
+    &.primary-color {
+      color: $primary;
+    }
+
+    &.custom-underline {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: '';
+        display: block;
+
+        position: absolute;
+
+        bottom: 5px;
+        left: 0;
+
+        width: 100%;
+        height: 6px;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='144' height='6' fill='none'%3E%3Cpath d='M0 4.5C0 3.66657 0.666422 2.98612 1.49967 2.96876L140.969 0.0631374C142.633 0.0284824 144 1.36745 144 3.03125C144 4.67084 142.671 6 141.031 6H1.5C0.671576 6 0 5.32843 0 4.5Z' fill='%23326BFF'/%3E%3C/svg%3E%0A");
+        background-size: 100% 100%;
+      }
+    }
+
+    &.light-blue-background {
+      padding: 10px;
+
+      background: linear-gradient(180deg, rgba(50, 107, 255, 0.10) 0%, rgba(50, 107, 255, 0.15) 100%);
+      border-radius: 10px;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &.size-24 {
-    font-size: 24px;
+    font-size: $font-size-P-HeroBanner;
+  }
+
+  &.personal-message {
+    font-size: $font-size-P-PersonalMessage;
+    line-height: $line-height-P-PersonalMessage;
   }
 }
 

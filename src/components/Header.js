@@ -14,7 +14,7 @@ export default function Header() {
             <div className="logo">
               <Link href="/">
                 <a>
-                  <Image src={Logo.src} alt="Branderly - Performance Marketing Agency" width={Logo.width} height={Logo.height} />
+                  <Image src={Logo.src} alt="AtlanticCMNC - Second Citizenship by Investment" width={Logo.width} height={Logo.height} />
                 </a>
               </Link>
             </div>

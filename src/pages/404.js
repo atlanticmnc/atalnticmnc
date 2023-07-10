@@ -7,9 +7,9 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Page not found – Branderly</title>
+        <title>Page not found – AtlanticCMNC</title>
         <meta name="description"
-              content="Branderly is a company that focuses on increasing clients' marketing ROI. We secure the delivery of high-quality digital marketing services by doing preliminary research and working out implementation strategies. Diving deep into clients' bottlenecks to provide a real solution."/>
+              content="AtlanticCMNC - Error Page"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <DefaultLayout>

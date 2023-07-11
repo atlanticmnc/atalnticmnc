@@ -1,0 +1,58 @@
+section.section.free-consultation {
+  h2 {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    max-width: 840px;
+    margin: 0 auto 100px;
+  }
+
+  .row {
+    --bs-gutter-x: 100px;
+    --bs-gutter-y: 50px;
+  }
+
+  .benefit-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .block-icon {
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .block-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.75;
+      text-align: center;
+
+      span {
+        display: block;
+        font-weight: 400;
+      }
+    }
+  }
+
+  button {
+    margin: 100px auto 0;
+  }
+
+  .section-image {
+    margin: 70px auto 0;
+
+    max-width: 960px;
+    width: 100%;
+    height: 550px;
+
+    background: rgba($primary, 0.1);
+    border-radius: 10px;
+  }
+}

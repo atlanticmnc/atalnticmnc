@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { FormContext } from "../../pages/landing-pages/consultation";
 
 export default function Range({ Min, Max, Step, Symbol, Name, value, error, setFieldValue }) {
   

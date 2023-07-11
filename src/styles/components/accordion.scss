@@ -1,0 +1,42 @@
+.accordion {
+  border: 0;
+
+  .accordion-item {
+    border: 0;
+    border-bottom: 1px solid $lightGray;
+
+    &:first-child {
+      border-top: 1px solid $lightGray;
+    }
+
+    h2.accordion-header {
+      button.accordion-button {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: $black;
+
+        padding: 30px 0;
+
+        &:not(.collapsed) {
+          color: $primary;
+          background: none;
+          box-shadow: none;
+        }
+
+        &:hover {
+          color: $primaryHover;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    .accordion-collapse {
+      .accordion-body {
+        padding: 0 0 30px;
+      }
+    }
+  }
+}

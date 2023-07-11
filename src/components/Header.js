@@ -9,8 +9,8 @@ export default function Header() {
   return (
     <header>
       <Container>
-        <Row>
-          <Col lg={12}>
+        <Row className="justify-content-center">
+          <Col lg="auto">
             <div className="logo">
               <Link href="/">
                 <a>

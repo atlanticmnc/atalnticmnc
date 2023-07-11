@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.2.9",
+    "iconsax-react": "^0.0.8",
     "lodash": "^4.17.21",
     "next": "12.3.1",
     "nextjs-google-analytics": "^2.3.3",

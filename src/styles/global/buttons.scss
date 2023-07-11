@@ -145,16 +145,17 @@ button.btn {
     text-align: center;
 
     font-size: 28px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
 
-    background: $blue;
+    background: $primary;
     border-radius: 10px;
     box-shadow: 0 4px 15px 0 rgba($primary, 0.35);
 
     span {
+      font-family: 'Open Sans', sans-serif;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       text-transform: none;
     }
 

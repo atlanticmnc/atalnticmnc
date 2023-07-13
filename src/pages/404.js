@@ -9,7 +9,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Page not found – AtlanticCMNC</title>
+        <title>Страница не найдена – AtlanticCMNC</title>
         <meta name="description"
               content="AtlanticCMNC - Error Page"/>
         <link rel="icon" href="/favicon.ico"/>
@@ -20,15 +20,15 @@ export default function Custom404() {
             <Row>
               <Col lg={12} className="text-center">
                 <h1>
-                  <span className="primary-color">Oops..</span><br />
-                  Page was Not Found :(
+                  <span className="primary-color">Упс..</span><br />
+                  Страница не найдена :(
                 </h1>
                 <p className="size-24">
-                  Please, go back to homepage or try again later.
+                  Пожалуйста, вернитесь на главную либо попробуйте позже.
                 </p>
                 <Link href="/">
                   <button className="btn btn-primary btn-arrow">
-                    Back to homepage
+                    Вернуться на главную
                   </button>
                 </Link>
               </Col>

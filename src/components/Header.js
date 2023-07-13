@@ -13,9 +13,7 @@ export default function Header() {
           <Col lg="auto">
             <div className="logo">
               <Link href="/">
-                <a>
-                  <Image src={Logo.src} alt="AtlanticCMNC - Second Citizenship by Investment" width={Logo.width} height={Logo.height} />
-                </a>
+                <Image src={Logo.src} alt="AtlanticCMNC - Second Citizenship by Investment" width={Logo.width} height={Logo.height} />
               </Link>
             </div>
           </Col>

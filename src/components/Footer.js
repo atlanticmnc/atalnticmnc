@@ -9,16 +9,14 @@ export default function Footer() {
         <Row className="align-items-center justify-content-between">
           <Col xs="auto">
             <div className="copyright">
-              © 2023 Atlantic CMNC – All rights reserved.
+              © 2023 AtlanticCMNC – Все права защищены.
             </div>
           </Col>
           <Col xs="auto">
             <ul className="nav justify-content-end">
               <li className="nav-item">
-                <Link href="#">
-                  <a className="nav-link">
-                    Privacy Policy
-                  </a>
+                <Link href="#" className="nav-link">
+                  Политика Конфиденциальности
                 </Link>
               </li>
             </ul>

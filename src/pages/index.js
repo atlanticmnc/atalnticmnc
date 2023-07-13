@@ -17,8 +17,8 @@ export default function Home() {
             <Row>
               <Col lg={12} className="text-center">
                 <h1>
-                  Erase boundaries by<br/>
-                  <span className="primary-color">Acquiring Second Citizenship</span>
+                  Сотрите границы!<br/>
+                  <span className="primary-color">Получите Второе Гражданство</span>
                 </h1>
                 <p className="size-24">
                   High-net-worth individuals can participate in investment programs to obtain a second passport. We will
@@ -28,12 +28,10 @@ export default function Home() {
                 
                 </div>
                 <Link href="/consultation">
-                  <a>
-                    <button className="btn btn-landing-page">
-                      Schedule a free consultation
-                      <span>Find out everything before you make decision</span>
-                    </button>
-                  </a>
+                  <button className="btn btn-landing-page">
+                    Бесплатная Консультация
+                    <span>Узнайте обо всем прежде чем выбрать!</span>
+                  </button>
                 </Link>
               </Col>
             </Row>
@@ -45,8 +43,8 @@ export default function Home() {
             <Row>
               <Col lg={12}>
                 <h2 className="text-center">
-                  Are you looking for freedom?<br/>
-                  <span className="primary-color">The Benefits of Second Citizenship</span>
+                  Хотите больше свободы?<br/>
+                  <span className="primary-color">Преимущества Второго Гражданства</span>
                 </h2>
                 <ul className="benefit-list">
                   {
@@ -62,12 +60,10 @@ export default function Home() {
                   }
                 </ul>
                 <Link href="/consultation">
-                  <a>
-                    <button className="btn btn-landing-page">
-                      Schedule a free consultation
-                      <span>Find out everything before you make decision</span>
-                    </button>
-                  </a>
+                  <button className="btn btn-landing-page">
+                    Бесплатная Консультация
+                    <span>Узнайте обо всем прежде чем выбрать!</span>
+                  </button>
                 </Link>
               </Col>
             </Row>
@@ -78,7 +74,7 @@ export default function Home() {
             <Row>
               <Col lg={12} className="text-center">
                 <h2>
-                  Citizenship
+                  Что мы предлагаем?
                 </h2>
                 <p>
                   Multiple citizenships provide its holder with an option to cut their tax payments. The person can pick
@@ -87,7 +83,7 @@ export default function Home() {
                 </p>
                 <Row>
                   {
-                    _.times(6, (citizenshipIndex) => (
+                    _.times(3, (citizenshipIndex) => (
                       <Col lg={4} key={citizenshipIndex}>
                         <div className="citizenship-block">
                           <div className="block-image">
@@ -127,7 +123,7 @@ export default function Home() {
                   }
                 </Row>
                 <div className="section-comment">
-                  +30 More options available!
+                  + Несколько Других Опций!
                 </div>
               </Col>
             </Row>
@@ -138,8 +134,8 @@ export default function Home() {
             <Row className="justify-content-center">
               <Col lg={10} className="text-center">
                 <h2>
-                  <span className="primary-color">FREE CONSULTATION</span><br/>
-                  Discover Perfect Citizenship for You!
+                  <span className="primary-color">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span><br/>
+                  Мы поможем Вам сделать выбор!
                 </h2>
                 <p>
                   Multiple citizenships provide its holder with an option to cut their tax payments. The person can pick
@@ -163,12 +159,10 @@ export default function Home() {
                   }
                 </Row>
                 <Link href="/consultation">
-                  <a>
-                    <button className="btn btn-landing-page">
-                      Schedule a free consultation
-                      <span>Find out everything before you make decision</span>
-                    </button>
-                  </a>
+                  <button className="btn btn-landing-page">
+                    Бесплатная Консультация
+                    <span>Узнайте обо всем прежде чем выбрать!</span>
+                  </button>
                 </Link>
                 <div className="section-image">
                 
@@ -183,7 +177,7 @@ export default function Home() {
             <Row>
               <Col lg={12}>
                 <h2 className="text-center">
-                  Frequently Asked Questions
+                  Часто Задаваемые Вопросы
                 </h2>
                 <Accordion defaultActiveKey="0">
                   <Accordion.Item eventKey="0">

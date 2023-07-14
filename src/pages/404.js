@@ -9,9 +9,9 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Страница не найдена – AtlanticCMNC</title>
+        <title>Страница не найдена – AtlanticMNC</title>
         <meta name="description"
-              content="AtlanticCMNC - Error Page"/>
+              content="AtlanticMNC - Error Page"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <DefaultLayout>

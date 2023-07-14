@@ -2,15 +2,24 @@ import React from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import _ from 'lodash';
 import { MoneySend } from 'iconsax-react';
-
 import DefaultLayout from '@/layouts/DefaultLayout';
-import Image from "next/image";
-import Logo from "@/images/logo.svg";
-import Link from "next/link";
+import Image from 'next/image';
+import Logo from '@/images/logo.svg';
+import Link from 'next/link';
+import { event } from 'nextjs-google-analytics';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Подберите Ваше Второе Гражданство – AtlanticMNC</title>
+        <meta
+          name="description"
+          content="Подберите Ваше Второе Гражданство – AtlanticMNC"
+        />
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
       <DefaultLayout>
         <section className="section hero-banner">
           <Container>
@@ -28,7 +37,15 @@ export default function Home() {
                 
                 </div>
                 <Link href="/consultation">
-                  <button className="btn btn-landing-page">
+                  <button
+                    className="btn btn-landing-page"
+                    onClick={() => {
+                      event('free_consultation_button_click', {
+                        category: 'Free Consultation Clicked',
+                        label: 'Free Consultation Clicked',
+                      });
+                    }}
+                  >
                     Бесплатная Консультация
                     <span>Узнайте обо всем прежде чем выбрать!</span>
                   </button>
@@ -60,7 +77,15 @@ export default function Home() {
                   }
                 </ul>
                 <Link href="/consultation">
-                  <button className="btn btn-landing-page">
+                  <button
+                    className="btn btn-landing-page"
+                    onClick={() => {
+                      event('free_consultation_button_click', {
+                        category: 'Free Consultation Clicked',
+                        label: 'Free Consultation Clicked',
+                      });
+                    }}
+                  >
                     Бесплатная Консультация
                     <span>Узнайте обо всем прежде чем выбрать!</span>
                   </button>
@@ -147,7 +172,7 @@ export default function Home() {
                       <Col xs="auto" key={benefitIndex}>
                         <div className="benefit-block">
                           <div className="block-icon">
-                            <MoneySend color="#386EBE" />
+                            <MoneySend color="#386EBE"/>
                           </div>
                           <div className="block-title">
                             $100,000+
@@ -159,7 +184,15 @@ export default function Home() {
                   }
                 </Row>
                 <Link href="/consultation">
-                  <button className="btn btn-landing-page">
+                  <button
+                    className="btn btn-landing-page"
+                    onClick={() => {
+                      event('free_consultation_button_click', {
+                        category: 'Free Consultation Clicked',
+                        label: 'Free Consultation Clicked',
+                      });
+                    }}
+                  >
                     Бесплатная Консультация
                     <span>Узнайте обо всем прежде чем выбрать!</span>
                   </button>
@@ -211,5 +244,5 @@ export default function Home() {
         </section>
       </DefaultLayout>
     </>
-  )
+  );
 }

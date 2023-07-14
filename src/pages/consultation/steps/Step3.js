@@ -21,7 +21,8 @@ function Step3({ formData, setFormData, submitForm }) {
             startTime: Yup.string().required(`Required field`),
           })
         }
-        onSubmit={(values) => {
+        onSubmit={(values, { setSubmitting }) => {
+          setSubmitting(true);
           setFormData((prevState) => ({
             ...prevState,
             ...values,
@@ -37,6 +38,7 @@ function Step3({ formData, setFormData, submitForm }) {
             handleChange,
             handleBlur,
             handleSubmit,
+            isSubmitting,
           }) => (
           <form className="form-container" onSubmit={handleSubmit}>
             <Row className="button-gy-70">
@@ -142,7 +144,7 @@ function Step3({ formData, setFormData, submitForm }) {
                 <button
                   className="btn btn-primary btn-arrow w-100"
                   type="submit"
-                  disabled={values.startTime.length === 0}
+                  disabled={values.startTime.length === 0 || isSubmitting}
                 >
                   Записаться на консультацию
                 </button>
